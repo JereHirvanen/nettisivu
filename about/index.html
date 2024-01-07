@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="../style.css">
+  <link rel="icon" type="image/x-icon" href="../pictures/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/bf531f895c.js" crossorigin="anonymous"></script>
+  <title>Tietoja sivusta</title>
+</head>
+<body>
+  <section class="header">
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="../">KOTI</a></li>
+          <li><a href="../about">TIETOJA SIVUSTA</a></li>
+          <li><a href="../blogi">BLOGI</a></li>
+          <li><a href="../login.php">KIRJAUDU SISÄÄN</a></li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+  </section>
+
+<div class="text-box">
+  <h1>Tietoja sivustosta</h1>
+  <p>Tervetuloa Amisjere.com -sivulle! Olemme nuori ja dynaaminen joukko, joka rakastaa ohjelmointia ja kehitystyötä. Tavoitteenamme on luoda moderneja ja käyttäjäystävällisiä verkkosivustoja ja sovelluksia.</p>
+  <p>Jos tarvitset apua sivuston suunnittelussa tai kehityksessä, ota rohkeasti yhteyttä!</p>
+  <p>Sähköposti: info@amisjere.com</p><br>
+  <input type="submit" value="Kirjaudu sisään" onClick="kirjaudu()">
+</div>
+
+
+
+
+<!------------JavaScript for Toggle Menu---------->
+<script>
+
+  var navLinks = document.getElementById("navLinks");
+
+  function showMenu(){
+    navLinks.style.right= "0";
+ }
+  function hideMenu(){
+    navLinks.style.right= "-200px";
+  }
+</script>
+
+<!------------JavaScripts for button press------->
+<script>
+  function kirjaudu() {
+    window.location.href="login.php";
+}
+</script>
+</body>
+</html>

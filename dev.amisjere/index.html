@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- JQuery-kirjaston lataaminen -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+  <!-- Ulkoasun määrittely CSS-tiedostossa -->
+  <link rel="stylesheet" href="style.css">
+  
+  <!-- Sivuston faviconin lisääminen -->
+  <link rel="icon" type="image/x-icon" href="/pictures/favicon.png">
+  
+  <!-- Google Fonts -kirjaston lataaminen -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,400;0,600;0,700;1,500&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome -ikonikirjaston lataaminen -->
+  <script src="https://kit.fontawesome.com/bf531f895c.js" crossorigin="anonymous"></script>
+
+  <title>Tervetuloa amisjere.comiin!</title>
+</head>
+<body>
+  <!-- Header-osa sivulla, sisältää navigaatiomenun -->
+  <section class="header">
+    <nav>
+      <div class="nav-links" id="navLinks">
+        <!-- X-ikoni navigaatiomenun piilottamista varten -->
+        <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+        <ul>
+          <li><a href="">KOTI</a></li>
+          <li><a href="about">TIETOJA SIVUSTA</a></li>
+          <li><a href="blogi">BLOGI</a></li>
+          <li><a href="login.php">KIRJAUDU SISÄÄN</a></li>
+        </ul>
+      </div>
+      <!-- Menu-ikoni navigaatiomenun näyttämistä varten -->
+      <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+    </nav>
+  </section>
+
+   <!-- Tekstialue, joka näytetään sivun keskellä -->
+  <div class="text-box">
+
+  <!-- Hieno kuva kuvastamaan vuoden parasta päivää -->
+  <h1>Sivustoa kehitellään</h1>
+  
+    <img src="pictures/Screenshot_2023-12-23-23-02-39-29_6012fa4d4ddec268fc5c7112cbb265e7.jpg" alt="joulukuva">
+
+
+  <p>Voit käydä täyttämässä kyselyn, <br> kunhan olet ensin kirjautunut.</p>
+  <input type="submit" value="Kirjaudu sisään" onClick="kirjaudu()">
+
+</div>
+<script src="script.js"></script>
+
+  <!-- JavaScript-ohjelma navigaatiomenun piilottamiseksi ja näyttämiseksi -->
+  <script>
+  // Etsitään navigaatiomenun linkit
+  var navLinks = document.getElementById("navLinks");
+
+  // Funktio navigaatiomenun näyttämiseksi
+  function showMenu(){
+    navLinks.style.right= "0";
+  }
+
+  // Funktio navigaatiomenun piilottamiseksi
+  function hideMenu(){
+    navLinks.style.right= "-200px";
+  }
+  </script>
+  <!-- JavaScript-ohjelma napin painalluksen käsittelyä varten -->
+  <script>
+  // Funktio, joka suoritetaan, kun "Kirjaudu sisään" -nappia painetaan
+  function kirjaudu() {
+    window.location.href="login.php"; // Ohjaa käyttäjän login.php-sivulle
+  }
+
+</script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+/* Kaikille elementeille määritellään fontti */
+* {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Body-elementtiin lisätään taustakuva lineaarigradientin ja kuvan yhdistelmänä, jonka jälkeen määritellään kuvalle tyyli */
+body {
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)), url(pictures/kuva1.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  -webkit-background-size: cover;
+  background-size: cover;
+  color: white;
+}
+
+/* Nav-elementtiin määritellään tyyli */
+nav {
+  display: flex; /* Asetetaan flexbox layout */
+  padding: 10px 6% 8px; /* Määritellään sisävälistykset */
+  justify-content: space-between; /* Asetetaan sisällön jakautuminen nav-elementissä */
+  align-items: right; /* Asetetaan elementin sisällön asettelu */
+}
+
+/* Huomio-luokkaan lisätään tekstityyli */
+.huomio {
+  text-align: center;
+  background-color: #000000;
+}
+
+/* Header-elementille määritellään tyyli */
+.header {
+  min-height: 20px; /* Määritellään vähimmäiskorkeus */
+  width: 100%; /* Asetetaan elementin leveys */
+  position: relative; /* Asetetaan elementin sijainti suhteessa dokumenttiin */
+}
+
+/* Nav-links-elementille määritellään tyyli */
+.nav-links {
+  flex: 1; /* Asetetaan flex-elementin kokoa */
+  text-align: center; /* Asetetaan elementin sisällön asettelu */
+}
+
+/* Nav-links-elementin sisällä oleville listaelementeille määritellään tyyli */
+.nav-links ul li {
+  list-style: none; /* Piilotetaan listatunnisteet */
+  display: inline-block; /* Asetetaan elementin asettelu vaakasuuntaiseksi */
+  padding: 8px 16px; /* Määritellään sisävälistykset */
+  position: relative; /* Asetetaan elementin sijainti suhteessa dokumenttiin */
+}
+
+/* Viimeiselle listaelementille poistetaan reunus */
+.nav-links ul li:last-child {
+  border: none;
+}
+
+/* A-elementille määritellään tyyli */
+.nav-links ul li a {
+  color: #fff; /* Määritellään tekstin väri */
+  text-decoration: none; /* Poistetaan alleviivaukset */
+  font-size: 13px; /* Määritellään tekstin koko */
+}
+
+/* Alapalkin linkkien alla oleva korostus */
+.nav-links ul li::after {
+content: "";
+width: 0%;
+height: 2px;
+background: #ffffff;
+display: block;
+margin: auto;
+transition: 0.5s; /* lisää ylityksen animaation */
+}
+
+/* Alapalkin linkkien korostus kun hiiri on niiden päällä */
+.nav-links ul li:hover::after {
+width: 100%;
+}
+
+/* Tekstilaatikko */
+.text-box {
+width: 90%;
+color: #fff;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+}
+
+/* Tekstin otsikko */
+.text-box h1 {
+font-size: 62px;
+}
+
+/* Tekstin kappale */
+.text-box p {
+margin: 10px 0 40px;
+font-size: 14px;
+color: #fff;
+}
+
+/* Isot napit */
+.big-btn {
+display: inline-block;
+text-decoration: none;
+color: #fff;
+border: 2px solid #fff;
+padding: 12px 34px;
+font-size: 13px;
+background: transparent;
+position: relative;
+cursor: pointer;
+}
+
+/* Isot napit kun hiiri on niiden päällä */
+.big-btn:hover {
+border: 1px solid #fff;
+background: #000000;
+transition: 0.5s; /* lisää värinmuutoksen animaation */
+}
+
+/* Navigaation font awesome -ikonit */
+nav .fa-solid {
+display: none;
+}
+
+/* Lomake */
+.form {
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+width: 400px;
+text-align: center;
+padding: 20px;
+}
+
+/* Lomakkeen otsikko */
+.form h1 {
+padding: 0 0 30px 0;
+}
+
+/* Lomakkeen sisältö */
+.form form {
+padding: 0 40px;
+box-sizing: border-box;
+}
+
+/* Alustetaan tekstikentän tyyli */
+form .txt_field {
+border-bottom: 2px solid #adadad;
+margin: 0 0 30px;
+}
+  
+/* Määritellään input-elementin tyyli */
+.txt_field input {
+width: 100%;
+height: 40px;
+color: white;
+font-size: 16px;
+border: none;
+background: none;
+outline: none;
+text-align: center;
+}
+  
+/* Määritellään label-elementin tyyli */
+.txt_field label {
+position: absolute;
+top: 50%;
+left: 5px;
+color: #adadad;
+transform: translateY(-50%);
+font-size: 16px;
+pointer-events: none;
+transition: 0.5s;
+}
+  
+/* Määritellään "salasana näkyvissä/piilossa" -linkin tyyli */
+.pass {
+padding: 2px 0 15px;
+cursor: pointer;
+}
+  
+.pass:hover {
+text-decoration: underline;
+}
+  
+/* Määritellään submit-nappulan tyyli */
+input[type=submit] {
+display: inline-block;
+text-decoration: none;
+color: #fff;
+border: 2px solid #fff;
+padding: 12px 34px;
+margin: 15px;
+font-size: 13px;
+background: transparent;
+position: relative;
+cursor: pointer;
+}
+  
+input[type=submit]:hover {
+border: 2px solid #fff;
+background: #000000;
+transition: 0.5s;
+}
+  
+/* Määritellään rekisteröitymislinkin tyyli */
+.signup_link {
+margin: 25px 0 0;
+}
+  
+.signup_link a {
+text-decoration: underline;
+color: #ffffff;
+}
+
+/* Asetetaan otsikon fonttikoko */
+.register h1 {
+  font-size: 62px;
+}
+
+/* Asetetaan virheilmoituksen tyyli */
+form .error-msg {
+  margin: 0 0 30px;
+  display: block;
+  background: black;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+/* Asetetaan lomakkeen tyyli */
+.kysely {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  text-align: center;
+  padding: 20px;
+}
+
+.kysely h1 {
+  margin: 0 0 30px;
+}
+
+.kysely p {
+  margin: 0 0 10px;
+}
+
+/* Asetetaan tekstikentän tyyli */
+.kysely input[type=text] {
+  width: 350px;
+  background: transparent;
+  border: 2px solid white;
+  color: white;
+}
+
+/* Asetetaan radio-painikkeen tyyli */
+.kysely input[type=radio] {
+  margin-left: 8px;
+}
+
+/* Asetetaan vastaustaulukon tyyli */
+.vastaukset {
+  margin: auto;
+  margin-top: 30px;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.vastaukset th {
+  border-left: 1px solid white;
+}
+
+.vastaukset th:last-child {
+  border-right: 1px solid white;
+}
+
+.vastaukset td {
+  border-top: 2px solid white;
+  border-left: 1px solid white;
+}
+
+.vastaukset td:last-child {
+  border-right: 1px solid white;
+}
+
+/* Asetetaan vastaussivun otsikon tyyli */
+.vastaussivu h1 {
+  text-align: center;
+}
+
+.joulukuva {
+  width: 100px;
+  height: 100px;
+}
+
+/* Eka rivi saa alareunan viivan */
+.eka_rivi {
+  border-bottom: 1px solid white;
+  }
+  
+  /* Kysymysluokan marginaali */
+  .question {
+  margin: 20px;
+  }
+  
+  /* Blogipostauksen sisältö */
+  .blog-post {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  }
+  
+  /* Yksittäinen blogipostaus */
+  .blogipostaus {
+  border: 1px solid white;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  text-align: center;
+  }
+  
+  /* Otsikko */
+  .blogipostaus h2 {
+  font-weight: 600;
+  font-size: 28px;
+  margin-bottom: 10px;
+  }
+  
+  /* Teksti */
+  .blogipostaus p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  }
+  
+  /* Linkit */
+  .blogipostaus a {
+  color: grey;
+  font-size: 16px;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  }
+  
+  /* Linkin hover-tila */
+  .blogipostaus a:hover {
+  color: white;
+  }
+
+  /* Responsive layout */
+  @media (max-width: 700px) {
+    .text-box h1 {
+      font-size: 30px;
+    }
+  }/*# sourceMappingURL=style.css.map */
